@@ -8,3 +8,7 @@ machine:
 test:
     override:
     - ant -f build.xml start
+
+general:
+  artifacts:
+    - "build\jar\"
