@@ -12,7 +12,10 @@ test:
     - cp ci-grader-demo/Grader.java ./Grader.java
   override:
     - sh build.sh
+	
+	
+test:
+  override:
+    - ant -lib lib/ Build: 
+        timeout: 600
 
-notify:
-  webhooks:
-    - url: http://cs3134-jarvis.meteor.com/webhook/ci
