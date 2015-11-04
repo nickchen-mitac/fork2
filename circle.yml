@@ -8,6 +8,9 @@ machine:
 test:
     override:
     - ant -f build.xml start
+    post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - find . -type f -regex ".*/build/junitreport/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
 
 general:
   artifacts:
