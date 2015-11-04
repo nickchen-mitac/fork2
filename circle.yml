@@ -2,20 +2,14 @@
 machine:
   # Version of java to use
   java:
-    version: oraclejdk8
+    version: openjdk7
 
 ## Customize test commands
 test:
-  pre:
-    - git clone https://github.com/linanqiu/ci-grader-demo.git
-    - cp ci-grader-demo/build.sh ./build.sh
-    - cp ci-grader-demo/Grader.java ./Grader.java
   override:
-    - sh build.sh
-	
-	
-test:
-  override:
-    - ant -lib lib/ Build: 
+    - ant start: 
         timeout: 600
+	
+	
+
 
