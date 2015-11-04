@@ -7,5 +7,4 @@ machine:
 ## Customize test commands
 test:
   override:
-    - ant start: 
-	
+    - ant start:
