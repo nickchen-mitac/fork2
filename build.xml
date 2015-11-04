@@ -8,7 +8,7 @@
 
     <property name="main-class"  value="oata.HelloWorld"/>
 
-
+	<target name="start" depends="clean, compile, jar, run, junit, junitreport" />
 
     <target name="clean">
         <delete dir="${build.dir}"/>
