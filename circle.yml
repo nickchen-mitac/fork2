@@ -8,8 +8,4 @@ machine:
 test:
   override:
     - ant start: 
-        timeout: 600
 	
-	
-
-
